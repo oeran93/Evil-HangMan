@@ -1,6 +1,8 @@
 Java-Evil-HangMan
 =================
 
+**note that controller and model and in the wrong folders!!
+
 The program makes use of the HashMap and Set classes to simulate the Hangman game.
 
 In the ordinary game of Hangman, the opponent (computer) chooses a word and te
