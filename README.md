@@ -82,3 +82,9 @@ contain the letter. Whichever set is largest is chosen. That is the new set of a
 words, and the proper pattern of dashes and letter
 s so far is returned to the user. Keeping
 the set of possible words as large as possible makes it difficult for the other player
+
+COMMENTS:
+
+The program starts by loading all the words in the dictionary line by line. This Process is done once anyways so it doens't really affect the overall performances of the program. the possible sets are then created. This is the most time consuming part of the program. all the words in the set must be scanned to find how many times, if any, a letter occurs in that word, and in what position. This would be an O(n*m) algorithm with n being the number of words in the set and m the average length of a word. When i am ranging through the hashmap to find the sets instead its a O(n) algorithm, with n being the number of sets. This is because a search in the hashmap takes 1 try on average.
+Hashmap is the perfect way to to store the sets because every time i have to search through them to find the next current set and O(1) is the fastest possible algorithm.
+Finally I tested using JUnit all the key methods such as findLetterInWord, chooseCurrentSet, createPossibleSets and initializeCurrentSet. The rest of the testing was conducted live. Some of the pictures are included in the zip file. Finally I did not think a view class was necessary since there is no real user interface so I uncluded the fiew view methods in the main. 
